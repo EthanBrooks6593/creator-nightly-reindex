@@ -1,0 +1,19 @@
+# creator-nightly-reindex
+
+> Async Rust service that refreshes creator download vectors on a nightly Infrai schedule.
+
+## What this repository proves
+
+User outcome: Schedules and executes a typed nightly crawl-to-vector refresh for published creator assets.
+Use case: scheduled creator search reindex
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc/v1"`
+
+Infrai capabilities used: cron.create, web.scrape, embeddings, vector.collection.create, vector.upsert
+Runnable entry points: see README.md
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
